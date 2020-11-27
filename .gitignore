@@ -1,0 +1,13 @@
+# folders
+lib
+__pycache__
+venv
+.idea
+nowy
+*.iws
+.vscode/
+.dist
+.build
+main.spec
+
+.idea/workspace.xml
