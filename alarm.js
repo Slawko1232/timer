@@ -14,6 +14,7 @@ function format(num) {
     return withZero(hours) + ":" + withZero(minutes) + ":" + withZero(seconds);
 }
 
+
 function myTimer() {
   if(intervalInSeconds > 0) {
       intervalInSeconds-=1
