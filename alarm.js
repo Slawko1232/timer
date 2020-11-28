@@ -73,7 +73,7 @@ function start() {
   startczas = Date.now();
   losowanie = getRandomInt(0, 5);
     myVar = setInterval(newTimer, 100);
-    intervalInSeconds = 10;
+    intervalInSeconds = 90*60;
     startinterval = intervalInSeconds.valueOf();
     document.getElementById("button").style.visibility = "hidden";
     document.getElementById("image").style.visibility="hidden";
