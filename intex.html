@@ -12,22 +12,22 @@
 </head>
 
 <body> 
-  
+  <div class="tlo">
   <div class="flex-container">
-    <div id="timer" style="font-size: 10rem"></div>
+    <div id="timer"></div>   
     <div> 
       <button id="button" onClick="start()">START</button>
     </div>  
     <div>
-      <h id="text" style="font-size: 5rem; visibility: hidden">Teraz polewa: </h>
+      <h id="text" style="visibility: hidden">Teraz polewa: </h>
     </div>
     <div>
-      <img id="image" style="visibility: hidden; height: 30rem"></img>      
+      <img id="image" style="margin-top: 60px; visibility: hidden; height: 17rem"></img>      
     </div>
   </div>
+</div>
     <audio controls id="audio" style="visibility: hidden">
       <source src="audio/song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
     </audio>     
   <script src="alarm.js"></script>
 </body>
