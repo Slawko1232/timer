@@ -7,21 +7,28 @@
   <title>Beerpong rządzi</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+  <link rel="stylesheet" href="mystyle.css">
 
 </head>
 
-<body>
-    <div id="timer" style="font-size: 10rem">
-    </div>
-    <audio controls id="audio" style="visibility: hidden">
-        <source src="audio/song.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>     
+<body> 
+  
+  <div class="flex-container">
+    <div id="timer" style="font-size: 10rem"></div>
+    <div> 
       <button id="button" onClick="start()">START</button>
-      <h id="text" style="font-size: 10rem; visibility: hidden">Teraz polewa: </h>
-      <img id="image" style="visibility: hidden"></img>      
-    
+    </div>  
+    <div>
+      <h id="text" style="font-size: 5rem; visibility: hidden">Teraz polewa: </h>
+    </div>
+    <div>
+      <img id="image" style="visibility: hidden; height: 30rem"></img>      
+    </div>
+  </div>
+    <audio controls id="audio" style="visibility: hidden">
+      <source src="audio/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>     
   <script src="alarm.js"></script>
 </body>
 </html>
