@@ -2,6 +2,8 @@ var myVar;
 var schemat_polewania = {image: ["images/mieszek.png", "images/Pirzmi.png", "images/Remas.png", "images/Rosja.png", "images/Slawko.png"]};
 var losowanie;
 var intervalInSeconds = 90*60;
+var startinterval, y1, y2;
+
 
 function withZero(num){
     return num >= 10 ? num : "0" + num;
@@ -9,7 +11,7 @@ function withZero(num){
 function format(num) {
     var hours = Math.floor((num/60) / 60);
     var minutes = Math.floor((num - hours * 60 * 60) / 60);
-    var seconds = num - ((hours * 60 * 60) + (minutes * 60));
+    var seconds = Math.floor(num - ((hours * 60 * 60) + (minutes * 60)));
     // console.log(hours, minutes, seconds)
     return withZero(hours) + ":" + withZero(minutes) + ":" + withZero(seconds);
 }
@@ -17,7 +19,15 @@ function format(num) {
 
 function myTimer() {
   if(intervalInSeconds > 0) {
-      intervalInSeconds-=1
+      intervalInSeconds-=0.1;
+      var size= document.getElementsByClassName("flex-container")[0].style.backgroundSize;
+      y2 = (startinterval - intervalInSeconds)*100/startinterval;
+      y1 = 0.8*y2;
+      document.getElementsByClassName("flex-container")[0].style.backgroundSize = "100% "+y1+"%, 100% "+y2+"%";
+      // console.log("size", size);
+      if(intervalInSeconds < 0){
+        intervalInSeconds = 0;
+      }
   } else {      
     clearInterval(myVar);
     var audio = document.getElementById("audio"); 
@@ -29,6 +39,7 @@ function myTimer() {
   }
   document.getElementById("timer").innerHTML = format(intervalInSeconds);
 }
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -37,7 +48,8 @@ function getRandomInt(min, max) {
 
 function start() {
   losowanie = getRandomInt(0, 5);
-    myVar = setInterval(myTimer, 1000);
-    intervalInSeconds = 3;
+    myVar = setInterval(myTimer, 100);
+    intervalInSeconds = 90*60;
+    startinterval = intervalInSeconds.valueOf();
     document.getElementById("button").style.visibility = "hidden";
 }
