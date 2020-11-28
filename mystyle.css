@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: center;  */
+    border: 2px solid black;
+    clip-path: polygon(0% 0%, 15% 100%, 85% 100%,  100% 0%);
     height: 100%;
     width: 42%;
     margin-left: 29%;
@@ -12,8 +14,8 @@
     background-repeat: no-repeat;
   }
   .flex-container > div {
-    /* display: flex; */
-    margin-top: 30px;
+    /* height: 200px; */
+    margin-top: 10px;
     justify-content: center;
     text-align: center;
     line-height: 75px;
@@ -24,8 +26,23 @@
     background-color: #cccccc;
     background-image: linear-gradient(red, yellow);
   }
-  body {
+  .tlo{
+    display: flex;
+    background-image: url(images/tlo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
     height: 100%;
+    margin-left: 15%;
+  }
+  body {
+    height: 90%;
     width: 100%;
     position: absolute;
+  }
+  path 
+  {
+    stroke:"black";
+    stroke-width:"3";
+    fill:"none"; 
   }

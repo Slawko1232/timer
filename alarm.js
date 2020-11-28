@@ -52,4 +52,6 @@ function start() {
     intervalInSeconds = 90*60;
     startinterval = intervalInSeconds.valueOf();
     document.getElementById("button").style.visibility = "hidden";
+    document.getElementById("image").style.visibility="hidden";
+    document.getElementById("text").style.visibility="hidden";
 }
